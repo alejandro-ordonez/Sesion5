@@ -1,0 +1,48 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Page2"
+             x:Class="Sesion5.Pages.MonkeyDetail"
+             BackgroundColor="{DynamicResource SecondaryColor}">
+
+
+    <Grid RowDefinitions="*, 60, 3*" RowSpacing="15">
+
+        <Image Source="{Binding MonkeyIcon}"
+               Grid.Row="0" Grid.RowSpan="2"
+               Aspect="AspectFill"/>
+
+        <Frame BackgroundColor="LightGray"
+               Padding="5"
+               Opacity="0.7"
+               Grid.Row="1">
+
+            <Label Text="{Binding MonkeyName}"
+                   Style="{StaticResource WhiteTitle}"/>
+        </Frame>
+
+        <VerticalStackLayout Spacing="20" 
+                             Grid.Row="2"
+                             Padding="20">
+            <Label Text="{Binding Description}"/>
+
+            <CollectionView ItemsSource="{Binding MonkeyGallery}" ItemsLayout="VerticalGrid, 3">
+
+                <CollectionView.Header>
+                    <Label Text="Monkey Gallery!!"/>
+                </CollectionView.Header>
+
+                <CollectionView.ItemTemplate>
+
+                    <DataTemplate>
+                        <Image Source="{Binding .}" Aspect="AspectFill"/>
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+        </VerticalStackLayout>
+
+    </Grid>
+
+
+</ContentPage>

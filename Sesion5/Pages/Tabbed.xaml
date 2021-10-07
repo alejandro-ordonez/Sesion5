@@ -1,0 +1,18 @@
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            Title="Page2"
+            xmlns:views="clr-namespace:Sesion5.Pages"
+            x:Class="Sesion5.Pages.Tabbed"
+            BackgroundColor="{DynamicResource SecondaryColor}">
+
+
+    <ContentPage>
+        <Label Text="asdfasdf"/>
+    </ContentPage>
+
+    <ContentPage>
+        <Label Text="asdfasdf"/>
+    </ContentPage>
+
+
+</TabbedPage>
